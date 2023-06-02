@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Feliz Cumplea&ntilde;os</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      transition: background-color 1s ease-in-out;
+    }
+
+    h1 {
+      font-family: "Comic Sans MS", cursive;
+      font-size: 80px;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-family: "Comic Sans MS", cursive;
+      font-size: 64px;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  </style>
+  <script>
+    function cambiarColorFondo() {
+      var colores = ["#FF0000", "#00FF00", "#0000FF", "#FFFF00", "#FF00FF", "#00FFFF"];
+      var colorAleatorio = colores[Math.floor(Math.random() * colores.length)];
+      document.body.style.backgroundColor = colorAleatorio;
+    }
+
+    setInterval(cambiarColorFondo, 1000);
+
+    function reproducirMusica() {
+      var audio = document.getElementById('myAudio');
+      audio.play();
+    }
+  </script>
+</head>
+<body>
+   <h1>Feliz cumplea&ntilde;os</h1>
+  <div class="gif-container">
+    <img src="C:\Users\gusta\OneDrive\Documentos\suni\perro-brazil.gif" alt="GIF de cumpleaños">
+  </div>
+  <h2>SUNI!</h2>
+
+  <audio id="myAudio" src="C:\Users\gusta\OneDrive\Documentos\suni\The Legend of Zelda  Ocarina of Time - Shop Theme - YouTube.mp3" loop>
+    Tu navegador no admite la reproducción de audio.
+  </audio>
+
+  <button onclick="reproducirMusica()">Reproducir</button>
+</body>
+</html>
+
+
